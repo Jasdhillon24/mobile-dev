@@ -1,8 +1,9 @@
 import { registerRootComponent } from 'expo';
+import { ExpoRoot } from 'expo-router';
+import React from 'react';
 
-import App from './App';
+// Wrap ExpoRouter in a React component
+const App = () => React.createElement(ExpoRoot);
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
+// Register the App component
 registerRootComponent(App);
